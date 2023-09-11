@@ -12,29 +12,19 @@ public class WordCRUD implements ICRUD {
     this.s = s;
   }
 
-  /*
-  => 난이도(1,2,3) & 새 단어 입력 :1 driveway
-  뜻 입력 : 차고 진입로
-  새 단어가 단어장에 추가되었습니다.
-   */
-
   @Override
   public Object add() {
     System.out.print("  => 난이도(1,2,3) & 새 단어 입력 : ");
-    int level = s.nextInt();
+    int level = s.nextInt();    // nextInt와 nextLine 구분!
     String word = s.nextLine();
-    // 1 driveway
     System.out.print("뜻 입력 : ");
     String meaning = s.nextLine();
-    // 차고 진입로
-//    System.out.println();
     return new Word(0, level, word, meaning);
   }
 
-  public void addWord() {
-    // wordmanger에서 호출할 것이기 때문에 list에 추가까지
-    Word one = (Word)add();
-    list.add(one);
+  public void addItem() {
+    Word _word = (Word)add();
+    list.add(_word);
     System.out.println("새 단어가 단어장에 추가되었습니다. ");
   }
 
@@ -77,8 +67,10 @@ public class WordCRUD implements ICRUD {
     String meaning = s.nextLine();
     Word word = list.get(idlist.get(id-1));
     word.setMeaning(meaning);
-
+    System.out.println("단어가 수정되었습니다. ");
   }
+
+
 
   @Override
   public int update(Object obj) {

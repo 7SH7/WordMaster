@@ -25,7 +25,7 @@ public class WordManager{
         "*********************\n" +
         "=> 원하는 메뉴는? ");
 
-    return s.nextInt();
+    return s.nextInt();   // 숫자 받아와.
 
   }
 
@@ -37,25 +37,19 @@ public class WordManager{
         System.out.println("프로그램 종료! 다음에 만나요~");
         break;
       }
-      if(menu == 4) {
-        // create
-        wordCRUD.addWord();
-      }
       else if(menu == 1) {
-        // list
         wordCRUD.listAll();
+      }
+      if(menu == 4) {
+        wordCRUD.addItem();
       }
       else if(menu == 5){
         wordCRUD.updateItem();
       }
       else if(menu == 6){
         // delete
+
       }
-
-
-
-//    System.out.println(menu);
-//    System.out.println("WordManager!!!");
     }
   }
 
