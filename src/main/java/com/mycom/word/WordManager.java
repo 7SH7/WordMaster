@@ -1,5 +1,7 @@
 package com.mycom.word;
 
+import java.io.*;
+import java.util.Dictionary;
 import java.util.Scanner;
 
 public class WordManager{
@@ -31,6 +33,8 @@ public class WordManager{
 
 
   public void start() {
+
+    wordCRUD.loadFile();
     while (true) {
       int menu = selectmenu();
       if(menu == 0)  {
@@ -39,6 +43,9 @@ public class WordManager{
       }
       else if(menu == 1) {
         wordCRUD.listAll();
+      }
+      else if(menu == 2) {
+        wordCRUD.searchLevel();
       }
       if(menu == 4) {
         wordCRUD.addItem();
@@ -49,6 +56,9 @@ public class WordManager{
       else if(menu == 6){
         // delete
         wordCRUD.deleteItem();
+      }
+      else if(menu == 7){
+        wordCRUD.saveFile();
       }
     }
   }

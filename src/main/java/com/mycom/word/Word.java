@@ -60,4 +60,8 @@ public class Word {
 //    String str =  slevel + " " + word + " " + meaning ;
     return str;
   }
+
+  public String toFileString(){
+    return this.level + "|" + this.word + "|" + this.meaning;
+  }
 }
