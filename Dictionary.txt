@@ -3,3 +3,4 @@
 1|equipment|장비, 물품
 1|pole|기둥, 장대
 1|formerly|이전에, 예전에
+4| hate|싫어하다

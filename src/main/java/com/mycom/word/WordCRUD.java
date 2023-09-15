@@ -1,6 +1,9 @@
 package com.mycom.word;
 
 import java.io.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,16 +11,18 @@ public class WordCRUD implements ICRUD {
   ArrayList<Word> list;
   Scanner s;
   String fileName = "Dictionary.txt";
+  Connection conn;
 
 
   WordCRUD(Scanner s){
     list = new ArrayList<>();
     this.s = s;
+//    conn = DBConnection.getConneciton();  // DB에 접근할 수 있게 해줌. 쿼리 관련!
   }
 
   @Override
   public Object add() {
-    System.out.print("  => 난이도(1,2,3) & 새 단어 입력 : ");
+    System.out.print("  => 난이도(1,2,3,4,5) & 새 단어 입력 : ");
     int level = s.nextInt();    // nextInt와 nextLine 구분!
     String word = s.nextLine();
     System.out.print("뜻 입력 : ");
@@ -32,6 +37,8 @@ public class WordCRUD implements ICRUD {
   }
 
   public void listAll() {
+    // 쿼리!!
+//    loadData();1
     System.out.println("--------------------------------");
     for(int i = 0 ; i < list.size() ; i++) {
       System.out.print((i + 1) + " ");
@@ -132,10 +139,11 @@ public class WordCRUD implements ICRUD {
     }
   }
 
+  // saveFile 기능은 문제 있음!
   public void saveFile(){
     // 파일저장
     try {
-      PrintWriter pnt = new PrintWriter(new FileWriter("test.txt"));
+      PrintWriter pnt = new PrintWriter(new FileWriter("Dictionary.txt"));
       for(Word word : list){
         pnt.write(word.toFileString() + "\n");
       }
@@ -163,14 +171,37 @@ public class WordCRUD implements ICRUD {
   }
 
   public void searchLevel() {
-    System.out.print("원하는 레벨은 ");
+    System.out.print("원하는 레벨은?");
     int level = s.nextInt();
     listAll(level);
   }
 
   public void searchWord() {
-    System.out.print("원하는 레벨은 ");
+    System.out.print("원하는 단어에 포함되어 있는 문자는? ");
     String word = s.next();
     listAll(word);
   }
+
+  // 쿼리 관련 함수!
+/*  public void loadData() {
+    list.clear();
+    String selectall = "select * from dictionary";
+    try{
+      Statement stmt = conn.createStatement();
+      ResultSet rs = stmt.executeQuery(selectall);
+      while(true){
+        if(!rs.next()) break;
+        int id = rs.getInt("id");
+        int level = rs.getInt("level");
+        String word = rs.getString("word");
+        String meaning = rs.getString("meaning");
+        list.add(new Word(id, level, word, meaning));
+      }
+      rs.close();
+      stmt.close();
+    } catch (Exception e){
+      e.printStackTrace();
+    }
+  }*/
+
 }

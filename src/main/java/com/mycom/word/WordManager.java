@@ -41,26 +41,27 @@ public class WordManager{
         System.out.println("프로그램 종료! 다음에 만나요~");
         break;
       }
-      else if(menu == 1) {
+      else if(menu == 1) {  // ok
         wordCRUD.listAll();
       }
-      else if(menu == 2) {
+      else if(menu == 2) {  // ok
         wordCRUD.searchLevel();
       }
-      else if(menu == 3) {
+      else if(menu == 3) {  // ok
+        // 단어검색
         wordCRUD.searchWord();
       }
-      else if(menu == 4) {
+      else if(menu == 4) {  // ok
         wordCRUD.addItem();
       }
-      else if(menu == 5){
+      else if(menu == 5){ // ok
         wordCRUD.updateItem();
       }
-      else if(menu == 6){
+      else if(menu == 6){ // ok
         // delete
         wordCRUD.deleteItem();
       }
-      else if(menu == 7){
+      else if(menu == 7){ // -> dictionary가 변하지 않는다. => 수정 필요
         wordCRUD.saveFile();
       }
     }
