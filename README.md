@@ -1,11 +1,4 @@
-![image](https://github.com/7SH7/WordMaster/assets/97334714/816b57f6-9347-4d0b-aed7-d9aa23e45dab)# WordMaster
-1. [추가/목록 화면] 단어 추가/목록 실행 화면을 github에 업로드하고, Readme.md에 반영했는가?
-<img width="1440" alt="image" src="https://github.com/7SH7/WordMaster/assets/97334714/05fc3eef-e2f0-460f-82d0-9ffa91775960">
-
-2. 프로그램 종료하기.
-<img width="1440" alt="image" src="https://github.com/7SH7/WordMaster/assets/97334714/94f14b1a-89c6-44b3-a202-aefff2d0ba0b">
-
-
+# WordMaster
 
 1. 모든 단어 출력하는 기능
 <img width="1440" alt="image" src="https://github.com/7SH7/WordMaster/assets/97334714/7298d143-cba3-44cf-8114-bfa90fb0f09e">
@@ -23,9 +16,9 @@
 <img width="1440" alt="image" src="https://github.com/7SH7/WordMaster/assets/97334714/721edbf5-ffb5-4a7c-b79b-445aabe6c275">
 
 6. 단어 삭제
+<img width="1440" alt="image" src="https://github.com/7SH7/WordMaster/assets/97334714/f069381e-4c22-4760-abf3-70f860b80633">
 
-
-7. 
-
+7. 파일 저장 & 프로그램 종료
+<img width="1440" alt="image" src="https://github.com/7SH7/WordMaster/assets/97334714/3a947c36-a8ef-4e4e-9b4a-e48eef3c4ea9">
 
 
