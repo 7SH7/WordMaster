@@ -20,5 +20,5 @@
 
 7. 파일 저장 & 프로그램 종료
 <img width="1440" alt="image" src="https://github.com/7SH7/WordMaster/assets/97334714/3a947c36-a8ef-4e4e-9b4a-e48eef3c4ea9">
-
+<img width="1440" alt="image" src="https://github.com/7SH7/WordMaster/assets/97334714/01c4b14b-dd63-46fd-acfb-9a4ffc0de924">
 
